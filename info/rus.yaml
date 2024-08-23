@@ -1,0 +1,37 @@
+name: Kirill Yatsenko
+contacts:
+  email: kirillyat@gmail.com
+  telegram: kirillyat
+  github: kirillyat
+  linkedin: kirillyat
+  twitter: kirillyat
+  instagram: kirillyat
+experience:
+  - company: Yandex
+    position: Software Engineer
+    start_date: 2019-07-01
+    end_date: 2020-06-30
+    description: |
+      - Worked on the Yandex Taxi.
+      - Developed a machine learning model.
+  - company: Avito
+    position: Software Engineer
+    start_date: 2020-05-01
+    end_date: 2020-06-30
+    description: |
+      - Worked on a text generation model.
+      - Implemented a language model in PyTorch.
+      - Developed a web application for text generation.
+education:
+  - institution: Moscow State University
+    degree: Bachelor's Degree in Computer Science
+    start_date: 2018-09-01
+    end_date: 2022-06-30
+  - institution: ITMO University
+    degree: Master's Degree in Computer Science
+    start_date: 2023-09-01
+    end_date: 2025-06-30
+skills:
+  - Python
+  - C++
+  - Golang
