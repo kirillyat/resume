@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 import datetime
 
+
 app = Flask(__name__)
 
 
@@ -8,7 +9,7 @@ app = Flask(__name__)
 @app.route("/index")
 def index():
     return render_template(
-        "index.html", year=datetime.datetime.now().year, active_page="inde§x"
+        "index.html", year=datetime.datetime.now().year, active_page="index"
     )
 
 
