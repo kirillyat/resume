@@ -1,11 +1,50 @@
-{% extends "base.html" %}
-
-{% block title %}About{% endblock %} 
-
-{% block content %}
-<div class="col-md-8">
-<article class="blog-post">
-<h2 class="display-5 link-body-emphasis mb-1">About</h2>
-</article>
+{% extends "base.html" %} {% block title %}About{% endblock %} {% block content
+%}
+<div class="row g-5">
+  <div class="col-md-4">
+    <img
+      src="{{ url_for('static', filename='avatar.jpg') }}"
+      class="rounded-circle img-thumbnail float-start"
+      alt=" Kirill Yatsenko"
+    />
+  </div>
+  <div class="col-md-8">
+    <article class="blog-post">
+      <h2 class="display-5 link-body-emphasis mb-1">About</h2>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <h3>Experience:</h3>
+          <ul class="list-group list-group-flush">
+            {% for exp in experience %}
+            <li class="list-group-item">
+              {{ exp.company }} ({{ exp.start_date }} - {{ exp.end_date }})<br />
+              {{ exp.description }}
+            </li>
+            {% endfor %}
+          </ul>
+        </li>
+        <li class="list-group-item">
+          <h3>Education:</h3>
+          <ul class="list-group list-group-flush">
+            {% for edu in education %}
+            <li class="list-group-item">
+              {{ edu.institution }} ({{ edu.start_date }} - {{ edu.end_date
+              }})<br />
+              {{ edu.degree }}
+            </li>
+            {% endfor %}
+          </ul>
+        </li>
+        <li class="list-group-item">
+          <h3>Skills:</h3>
+          <ul class="list-group list-group-flush">
+            {% for skill in skills %}
+            <li class="list-group-item">{{ skill }}</li>
+            {% endfor %}
+          </ul>
+        </li>
+      </ul>
+    </article>
+  </div>
 </div>
 {% endblock %}
